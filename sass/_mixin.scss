@@ -1,0 +1,44 @@
+/*prefix*/
+@mixin prefix($property, $value) {
+  $known-prefixes: webkit, moz, ms, o;
+  @each $prefix in $known-prefixes{
+    #{'-'+$prefix+'-'+$property}: $value;
+  }
+}
+/* border with direction*/
+@mixin border1($bordersize , $bordercolor, $borderdirection){
+  @if $borderdirection==top{
+    border-top:$bordersize solid $bordercolor;
+  }
+     @if $borderdirection==bottom{
+  border-bottom:$bordersize solid $bordercolor;
+  }
+     @if $borderdirection==left{
+    border-left:$bordersize solid $bordercolor;
+  }
+     @if $borderdirection==right{
+   border-right:$bordersize solid $bordercolor;
+  }
+}
+/* border without direction*/
+@mixin border2($bordersize , $bordercolor){
+ border:$bordersize solid  $bordercolor;
+}
+ /* transition*/
+ @mixin transition($time){
+ -webkit-transition:all $time ease-in-out;
+ -moz-transition:all $time ease-in-out;
+ -o-transition:all $time ease-in-out;
+transition:all $time ease-in-out;
+}
+/* reset-list*/
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+/*box shadow*/
+@mixin boxshadow ($len , $wid , $blur , $color)
+{
+  box-shadow: $len $wid $blur $color , #{-$len} #{-$wid} $blur $color ;
+}

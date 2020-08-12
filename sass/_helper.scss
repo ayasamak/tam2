@@ -1,0 +1,51 @@
+/* hover ground*/
+%hoverground{
+position: absolute;
+top:0;
+left:0;
+right:0;
+bottom:0;
+background-color:black;
+opacity:.5;
+}
+/*
+<i class="fab fa-twitter"></i>
+<i class="fab fa-facebook"></i>
+<i class="fab fa-google-plus-g"></i>
+<i class="fab fa-instagram"></i>
+*/
+/*button scroll*/
+/*$(window).scroll(function(){
+ var sc= $(window).scrollTop();
+if ( sc > '350'){$('.upp').css('display','block');}
+else {$('.upp').css('display','none');}
+});
+  $('.upp').click(function(){
+  $('body ,html ').animate({scrollTop:'0'} ,200);
+});
+*/
+/* button html*/
+/*
+<div class="upp" style="display: block;">
+  <i class="fas fa-chevron-up"></i>
+</div>
+*/
+/* button css*/
+/*
+.upp{position: fixed;
+    right: 5px;
+    bottom: 2px;
+    display: none;
+    cursor: pointer;
+     i {
+    color: white;
+    float: right;
+    background-color:$main;
+    width: 50px;
+    height: 30px;
+    font-size: 25px;
+    text-indent: 13px;
+    border-radius: 10%;
+  }
+}
+*/
